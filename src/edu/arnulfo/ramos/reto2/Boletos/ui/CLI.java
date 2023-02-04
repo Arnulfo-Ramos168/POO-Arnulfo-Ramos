@@ -9,13 +9,13 @@ public class CLI {
     int adult = 0;
     int senor = 0;
     int senorsin = 0;
-    Scanner scan = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Escoge el boleto que desea comprar \n A) Adulto = $100 \n N) Niño = $70 \n I) abuelo con clave INAPAM = $50 \n B) abuelo sin clave INAPAM = $70 \n s) salir");
     System.out.println("");
     while (true){
         System.out.println(" A \n N \n I \n B \n s");
-        String escogerBoletos = scan.nextLine();
+        String escogerBoletos = scanner.nextLine();
         switch (escogerBoletos){
             case "A":
                 adult++;

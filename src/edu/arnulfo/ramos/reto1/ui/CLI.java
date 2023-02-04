@@ -11,6 +11,7 @@ public class CLI {
         System.out.println("(2) resta");
         System.out.println("(3) multiplicación");
         System.out.println("(4) división");
+        System.out.println("(5) otro");
 
 
         Scanner scanner = new Scanner(System.in);
@@ -44,13 +45,9 @@ public class CLI {
                 operacion = "/";
                 break;
 
+
         }
         System.out.printf("El resultado de la operacion de %d %s %d = %d ", operando1, operacion,operando2, resultado);
-
-
-
-
-
 
     }
 }
