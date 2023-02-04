@@ -8,6 +8,4 @@ public class CalculadorCostos {
     public static double calcularCostos(int numChild, int numAdult, int numSenior, int numSeniorsin){
         return (numChild * PRECIO_CHILD) + (numAdult * PRECIO_ADULT) + (numSenior * PRECIO_SENIOR) + (numSeniorsin * PRECIO_SENIORSIN);
     }
-
-
 }
