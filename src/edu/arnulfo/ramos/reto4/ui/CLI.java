@@ -16,7 +16,7 @@ public class CLI {
         }
         for (int trimestre :
         AnalizarVentas.obtenerMaximoTrimestre(ventas)){
-            System.out.println("pito" + AnalizarVentas.nombrarTrimestre(trimestre));
+            System.out.println("topi" + AnalizarVentas.nombrarTrimestre(trimestre));
         }
 
     }
