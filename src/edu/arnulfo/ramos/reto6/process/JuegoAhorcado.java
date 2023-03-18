@@ -21,9 +21,17 @@ public class JuegoAhorcado {
             System.out.println("La palabra a adivinar es: " + palabraAdivinada);
             System.out.println("Te quedan " + intentos + " intentos");
             System.out.println("Ingrese una letra: ");
-            letra = scanner.nextLine().toLowerCase();
-            if (letra.equals("0")){
-                return;
+            try {
+                letra = scanner.nextLine().toLowerCase();
+                if (letra.equals("0")) {
+                    return;
+                }
+                if (letra.length() != 1 || !Character.isLetter(letra.charAt(0))) {
+                    throw new IllegalArgumentException();
+                }
+            } catch (IllegalArgumentException exception) {
+                System.out.println("Favor de ingresar una letra válida");
+                continue;
             }
 
             boolean acerto = false;
