@@ -1,5 +1,9 @@
 package edu.arnulfo.ramos.reto9.process;
 import java.util.Random;
+/**
+ * La clase Ayudantes seencarga de generar ayudantes de manera aleagoria con un rango de caracteristicas
+ * las cuales tambien son seleccionadas de manera aleatoria para cada ayudante generado
+ */
 public class Ayudantes {
     private int numOjos;
     private String colorPiel;
@@ -8,6 +12,16 @@ public class Ayudantes {
     private int arreglarCosas;
     private int destructivo;
 
+    /**
+     * Constructor de la clase Ayudantes que permite crear un objeto con características específicas.
+     *
+     * @param numOjos El número de ojos del ayudante.
+     * @param colorPiel El color de piel del ayudante.
+     * @param altura La altura del ayudante.
+     * @param nivelObjetos El nivel de creación de objetos del ayudante.
+     * @param arreglarCosas El nivel para arreglar cosas del ayudante.
+     * @param destructivo El nivel de destrucción del ayudante.
+     */
     public Ayudantes(int numOjos, String colorPiel, String altura, int nivelObjetos, int arreglarCosas, int destructivo){
         this.numOjos = numOjos;
         this.colorPiel = colorPiel;
@@ -64,7 +78,17 @@ public class Ayudantes {
     public void setDestructivo(int destructivo) {
         this.destructivo = destructivo;
     }
+    /**
 
+     Constructor de la clase Ayudantes que genera un nuevo ayudante con características aleatorias.
+     Utiliza la clase Random de Java para generar valores aleatorios para cada una de las características del ayudante.
+     @param numOjos El número de ojos del ayudante, debe ser un número entero entre 1 y 2.
+     @param colorPiel El color de piel del ayudante, debe ser "amarillo" o "morado".
+     @param altura La altura del ayudante, debe ser "mediano" o "alto".
+     @param nivelObjetos El nivel de creación de objetos del ayudante, debe ser un número entero entre 1 y 5.
+     @param arreglarCosas El nivel para arreglar cosas del ayudante, debe ser un número entero entre 1 y 5.
+     @param destructivo El nivel de destrucción del ayudante, debe ser un número entero entre 1 y 5.
+     */
     public Ayudantes (){
         Random random = new Random();
         this.numOjos = random.nextInt(2) + 1;
@@ -74,6 +98,12 @@ public class Ayudantes {
         this.arreglarCosas = random.nextInt(5) + 1;
         this.destructivo = random.nextInt(5) + 1;
     }
+    /**
+
+     Este método muestra las características del ayudante.
+     Muestra el número de ojos, color de piel, altura, nivel de creación de objetos,
+     nivel para arreglar cosas y nivel de destrucción del ayudante.
+     */
     public void mostrarCaracteristicas(){
         System.out.println("Ayudante:");
         System.out.println("Numero de ojos:" + numOjos);
