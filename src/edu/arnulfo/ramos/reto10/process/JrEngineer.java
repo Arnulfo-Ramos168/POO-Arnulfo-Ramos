@@ -16,12 +16,17 @@ public class JrEngineer extends Empleado implements Programmer {
     //Métodos
     @Override
     public void trabajar() {
-
+        System.out.println("Trabaja como sabe");
     }
+
+    //@Override
+    //public int compareTo(Empleado empleado) {
+       // return nombre2 - empleado.nombre2;
+  //  }
 
     @Override
     public void programar() {
-
+        System.out.println("Conoce algunos lenguajes");
     }
 
 

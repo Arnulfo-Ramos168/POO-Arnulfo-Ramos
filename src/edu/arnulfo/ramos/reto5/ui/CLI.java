@@ -22,7 +22,7 @@ public class CLI {
         System.out.println("Bienvenido al juego de adivinar la palabra");
         int opcion = 1;
         while (opcion != 0) {
-            System.out.println("Seleccione el nivel de dificultad:");
+            System.out.println("Seleccione el nivel de dificultad: ");
             System.out.println("1 - Fácil");
             System.out.println("2 - Intermedio");
             System.out.println("3 - Avanzado");

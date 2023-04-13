@@ -1,8 +1,10 @@
 package edu.arnulfo.ramos.reto10.process;
 
-public abstract class Empleado {
+public abstract class Empleado{
+
     //Atributos base
     private String nombre;
+    String nombre2;
     private String apellido1;
     private String apellido2;
     private int numTelefono;
@@ -18,6 +20,7 @@ public abstract class Empleado {
     }
     //Métodos
     public abstract void trabajar();
+
     public String getNombre(){
         return nombre;
     }
