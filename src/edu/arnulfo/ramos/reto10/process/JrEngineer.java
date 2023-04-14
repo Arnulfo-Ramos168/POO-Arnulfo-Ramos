@@ -1,5 +1,10 @@
 package edu.arnulfo.ramos.reto10.process;
 
+/**
+ Clase JrEngineer que extiende de Empleado e implementa la interfaz Programmer.
+
+ Contiene los atributos y métodos propios de un ingeniero junior.
+ */
 public class JrEngineer extends Empleado implements Programmer {
     //Atributos
     private String lenguajesConocidos;
@@ -19,6 +24,10 @@ public class JrEngineer extends Empleado implements Programmer {
 
     }
 
+    /**
+     Método sobreescrito de la interfaz Programmer.
+     Define la acción de programar para el JrEngineer.
+     */
     @Override
     public void programar() {
 

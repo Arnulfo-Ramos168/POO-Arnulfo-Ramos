@@ -1,8 +1,20 @@
 package edu.arnulfo.ramos.reto10.process;
 
+/**
+ Clase Manager que extiende de la clase Empleado e implementa la interfaz Interviewer.
+
+ Representa a un gerente que trabaja en una empresa y es capaz de realizar entrevistas.
+ */
 public class Manager extends Empleado implements Interviewer{
     //Atributos
+    /**
+Atributo que representa el sector en el que trabaja el gerente.
+*/
     public String sector;
+
+    /**
+     Constructor vacío de la clase Manager.
+     */
     public Manager(){
     }
 
@@ -16,6 +28,9 @@ public class Manager extends Empleado implements Interviewer{
 
     }
 
+    /**
+     Método sobreescrito de la interfaz Interviewer que define la tarea de entrevistar del gerente.
+     */
     @Override
     public void Entrevistar() {
 
