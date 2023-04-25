@@ -2,6 +2,8 @@ package edu.arnulfo.ramos.reto11.ui;
 
 import edu.arnulfo.ramos.reto11.process.Empleado;
 import edu.arnulfo.ramos.reto11.process.JrEngineer;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,8 @@ public class CLI {
         }catch (IOException e){
             e.printStackTrace();
         }
-
+        ImprimirMayoresA20(list);
+        System.out.println(list);
     }
 
     //metodos para leer e imprimir el archivo creado
@@ -54,7 +57,7 @@ public class CLI {
                     readList.add(new JrEngineer(parts[0].trim(), Integer.parseInt(parts[2].trim()),Integer.parseInt(parts[3].trim())));
                 }
             }
-                ImprimirMayoresA20(readList);
+            ImprimirMayoresA20(readList);
         }catch (IOException e){
             e.printStackTrace();
         }
