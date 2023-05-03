@@ -8,13 +8,12 @@ package edu.arnulfo.ramos.reto12.process;
 public abstract class Empleado{
 private String nombre;
 private int edad;
-private String rfc;
+
 
 //Constructores
-public Empleado(String nombre, int edad, String rfc){
+public Empleado(String nombre, int edad){
         this.nombre = nombre;
         this.edad = edad;
-        this.rfc = rfc;
         }
 public Empleado() {
 
@@ -46,7 +45,4 @@ public void setEdad(int edad) {
         this.edad = edad;
         }
 
-    public String getRfc() {
-        return rfc;
-    }
 }
