@@ -1,22 +1,28 @@
 package edu.arnulfo.ramos.retoFinal.process;
-
-import javax.crypto.spec.PSource;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-import java.util.ArrayList;
-import java.util.Scanner;
-
+/**
+ * JuegoHadas es un juego de aventuras donde el jugador juega como un héroe que debe enfrentar a diferentes desafíos, incluidos ogros y la captura de hadas.
+ * El objetivo del juego es llegar al final y vencer al jefe final, que es un MagiDrago.
+ */
 public class JuegoHadas {
+    /**
+     * El método jugar es el punto de entrada principal del juego.
+     * Inicializa las variables necesarias para el juego y ejecuta un bucle while hasta que el héroe muera o venza al MagiDrago.
+     * Dentro del bucle, el jugador se encuentra con diferentes eventos aleatorios, incluyendo enfrentar a un ogro y buscar hadas.
+     * Cuando el héroe pierde todas sus vidas o el poder del mago llega a cero, el juego termina y se muestra un mensaje de derrota.
+     * Si el jugador logra vencer al MagiDrago, se muestra un mensaje de victoria y el juego termina.
+     */
     public static void jugar() {
-        Scanner scanner = new Scanner(System.in);
         int vidasHeroe = 10;
         int poderMago = 10;
         int hadasRescatadas = 0;
+        /* El juego continúa mientras el héroe tenga puntos de vida y el mago tenga puntos de poder.*/
         while(vidasHeroe !=0 && poderMago != 0){
             System.out.println("TE HAS TOPADO CON UN OGRO!!");
+            // El héroe decide enfrentarse al ogro o huir.
             if (Math.round(Math.random() * 1) == 1){
                 System.out.println("El heroe se enfrentra al ogro");
                 if (Math.round(Math.random() * 1) == 1){
-                    System.out.println("El heroe vencio al ogro! Rescataste un hada!");
+                    System.out.println("El heroe vencio al ogro! Rescataste un hada y en chinga le hiciste una casita!");
                     vidasHeroe ++;
                     hadasRescatadas ++;
                     poderMago --;
@@ -33,6 +39,8 @@ public class JuegoHadas {
             }else {
                 System.out.println("El heroe huye y se retira");
             }
+
+            // El mago busca nuevas hadas.
             if (Math.round(Math.random() * 1) == 1){
                 System.out.println("El mago esta en busca de nuevas hadas!!");
                 if (Math.round(Math.random() * 1) == 1){
@@ -63,9 +71,12 @@ public class JuegoHadas {
                 }
             }
         }
+
+        //Si las vidas del heroe llegan a 0 el heroe es derrotado y muere, terminando con el juego
         if (vidasHeroe == 0){
             System.out.println("El heroe ah sido derrotado... el caos en el reino de las hadas prevalecera hasta su extincion y el mago obtendra un poder supremo...\n...\n...\n...hasta que un nuevo heroe se alce");
         }
+        //Si el poder del mago llega a 0, terminara la primera fase de nuestra historia
         if (poderMago == 0){
             System.out.println("El mago hace un grito lleno de furia, pues su poder ah sido disminuido a 0... \nAl quedarse sin ideas, el mago opta por usar su ultima carta bajo la manga y comienza a pronunciar las " +
                     "siguientes palabras:");
@@ -79,23 +90,27 @@ public class JuegoHadas {
             System.out.println("");
             System.out.println("*Las nuves se apartan y dejan entrada al cielo, de este se logra apreciar una entidad quien al ver a nuestro heroe sin esperanzas decide apoyarlo en su lucha*");
             System.out.println("Kayle: Yo, Diosa de la justicia!! Te brindo a Espadafuego Celeste!!... Con esta arma seras capaz de alcanzar el nivel que necesitas para derrotarlo, lo demas esta en tus manos heroe!! Conviertete el salvador de las tierras intermedias!!");
-            vidasHeroe = 10;
+            vidasHeroe = 15;
             int HPDragon = 50;
             System.out.println("Vidas del heroe: " + vidasHeroe);
             System.out.println("Vida del MagiDrago: " + HPDragon);
 
+            //El juego continua hasta que las vidas del heroe o el dragon lleguen a 0
             while (vidasHeroe != 0 && HPDragon != 0){
                 if (Math.round(Math.random() * 1) == 1){
                     if (Math.round(Math.random() * 1) == 1){
                         System.out.println("El heroe lanza ataca al dragon");
                         if (Math.round(Math.random() * 1) == 1){
                             System.out.println("Ah asertado el golpe en la cabeza, a sufrido un ataque critico!!!");
-                            System.out.println("El dragon pierde -5 puntos de vida");
+                            System.out.println("El dragon pierde -7 puntos de vida");
                             HPDragon --;
                             HPDragon --;
                             HPDragon --;
                             HPDragon --;
                             HPDragon --;
+                            HPDragon --;
+                            HPDragon --;
+
                             System.out.println("HP del Heroe: " + vidasHeroe);
                             System.out.println("HP del Dragon:" + HPDragon);
                         }else {
@@ -111,7 +126,7 @@ public class JuegoHadas {
                     if (Math.round(Math.random() * 1) == 1){
                         System.out.println("Ah asertado su ataque contra el heroe!");
                         System.out.println("El heroe pierde -1 puntos de vida");
-                        vidasHeroe -- ;
+                        vidasHeroe --;
                         System.out.println("HP del Heroe: " + vidasHeroe);
                         System.out.println("HP del Dragon:" + HPDragon);
                     }else {
@@ -122,8 +137,8 @@ public class JuegoHadas {
             if (vidasHeroe == 0){
                 System.out.println("El heroe a muerto");
             }
-            if (HPDragon == 0){
-                System.out.println("El dragon ah sido derrotado... Las Tierras Intermedias finalmente han sido lobradas del caos, y nuestro heroe se alza como el salvador de este mundo");
+            if (HPDragon <= 0){
+                System.out.println("El dragon ah sido derrotado... Las Tierras Intermedias finalmente han sido liberadas del caos, y nuestro heroe se alza como el salvador de este mundo");
             }
         }
     }
